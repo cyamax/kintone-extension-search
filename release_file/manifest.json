@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "kintone extension search",
+  "version": "0.3.3.1",
+  "permissions": [
+    "storage",
+    "contextMenus"
+  ],
+  "description": "kintoneの検索を高速化",
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true,
+    "open_in_tab": false
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "browser_action": {
+    "default_title": "",
+    "default_icon": "icon_16.png",
+    "default_popup": "kintone_search.html"
+  },
+   "background": {
+   "scripts": ["background.js"],
+   "persistent": false
+     }
+}
