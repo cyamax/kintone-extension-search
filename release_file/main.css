@@ -1,0 +1,36 @@
+body {
+  background-color: #aaaaaa;
+  }
+
+
+form, input {
+  margin: 0; /* マージンをリセット */
+}
+form {
+  position: relative; /* 基準位置とする */
+}
+input[name="text1"] {
+  border: 0;
+  background-color: #eeeeee;
+  outline: 0; /*フォーカスした時の線を消す*/
+  height: 40px; /* 高さ40px */
+  width: 200px;
+  padding: 0 10px; 
+  position: absolute; /* 絶対配置 */
+  left: 40px;
+  top: 0; 
+  box-sizing: content-box; /* 幅にパディングを含めない */
+}
+input[type="image"] {
+  outline: 0; /*フォーカスした時の線を消す*/
+  background-color: #eeeeee;
+  border: 0;
+  padding: 0;
+  width: 40px;
+  height: 40px; /* 高さ40px */
+  position: absolute; /* 絶対配置 */
+  left: 0px; 
+  top: 0;
+  aopacity: 0.5; /* ボックスを半透明に */
+  
+}
