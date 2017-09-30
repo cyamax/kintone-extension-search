@@ -56,29 +56,23 @@ function restore_options() {
     url4    : ''
 
   }, function(items) {
-    url0     = items.url0;
-    command1 = items.command1;
-    detail1  = items.detail1;
-    url1     = items.url1;
-    command2 = items.command2;
-    detail2  = items.detail2;
-    url2     = items.url2;
-    command3 = items.command3;
-    detail3  = items.detail3;
-    url3     = items.url3;
-    command4 = items.command4;
-    detail4  = items.detail4;
-    url4     = items.url4;
+    url = [ items.url1 , items.url2 , items.url3 , items.url4 ];
+    command = [ items.command1 , items.command2 , items.command3 ,items.command4 ];
+    detail  = [ items.detail1 , items.detail2 , items.detail3 , items.detail4 ];
 
     //検索フォームにコマンドを表示
-    document.getElementById("code1").value=command1+" ";
-    document.getElementById("code1").label=detail1;
-    document.getElementById("code2").value=command2+" ";
-    document.getElementById("code2").label=detail2;
-    document.getElementById("code3").value=command3+" ";
-    document.getElementById("code3").label=detail3;
-    document.getElementById("code4").value=command4+" ";
-    document.getElementById("code4").label=detail4;
+    for (var i= 0; i < 4;i++){
+  $('#command').append('<li><a href="'+ url[i] +'">' + command[i] + ' : ' + detail[i] + '</a></li>');
+    }
+   // document.getElementById("code1").value=command1+" ";
+       // document.getElementById("code1")=detail1;
+   // document.getElementById("code2").value=command2+" ";
+   // document.getElementById("code2").label=detail2;
+   // document.getElementById("code3").value=command3+" ";
+   // document.getElementById("code3").label=detail3;
+   // //document.getElementById("code4")=command4+" ";
+    var code = document.getElementById("code4");
+    code.innerHTML ="aaa";
 
   });
 }

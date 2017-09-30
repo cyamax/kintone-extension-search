@@ -1,17 +1,19 @@
 body {
   background-color: #ffffff;
-  }
+}
 
 
 form, input {
   margin: 0; /* マージンをリセット */
 }
+
 form {
   position: relative; /* 基準位置とする */
 }
+
 input[name="text1"] {
-  border: 0;
   background-color: rgba(0,0,0, 0.05);
+  border: 0;
   outline: 0; /*フォーカスした時の線を消す*/
   height: 40px; /* 高さ40px */
   width: 300px;
@@ -21,16 +23,34 @@ input[name="text1"] {
   top: 0; 
   box-sizing: content-box; /* 幅にパディングを含めない */
 }
+
 input[type="image"] {
   background-color: rgba(0,0,0, 0.05);
-  outline: 0; /*フォーカスした時の線を消す*/
   border: 0;
+  outline: 0; /*フォーカスした時の線を消す*/
   padding: 0;
   width: 40px;
   height: 40px; /* 高さ40px */
   position: absolute; /* 絶対配置 */
   left: 0px; 
   top: 0;
-  aopacity: 0.5; /* ボックスを半透明に */
   
+}
+
+div {
+  background-color: rgba(0,0,0, 0.05);
+  position :absolute;
+  width: 360px;
+  height: 200px; /* 高さ40px */
+  left: 10px; 
+  top: 200px;
+}
+
+li {
+  background-color: rgba(0,0,0, 0.05);
+  height: 30px;
+}
+
+a {
+  text-decoration: none;
 }
