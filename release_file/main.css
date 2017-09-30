@@ -1,5 +1,5 @@
 body {
-  background-color: #aaaaaa;
+  background-color: #ffffff;
   }
 
 
@@ -11,10 +11,10 @@ form {
 }
 input[name="text1"] {
   border: 0;
-  background-color: #eeeeee;
+  background-color: rgba(0,0,0, 0.05);
   outline: 0; /*フォーカスした時の線を消す*/
   height: 40px; /* 高さ40px */
-  width: 200px;
+  width: 300px;
   padding: 0 10px; 
   position: absolute; /* 絶対配置 */
   left: 40px;
@@ -22,8 +22,8 @@ input[name="text1"] {
   box-sizing: content-box; /* 幅にパディングを含めない */
 }
 input[type="image"] {
+  background-color: rgba(0,0,0, 0.05);
   outline: 0; /*フォーカスした時の線を消す*/
-  background-color: #eeeeee;
   border: 0;
   padding: 0;
   width: 40px;
