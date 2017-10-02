@@ -41,7 +41,7 @@ kintone extension search はURLクエリ内の ***「xxxx」*** を検索ワー�
 https://chrome.google.com/webstore/detail/kintone-extension-search/mgbdmlpflafibjhcjnakcfdnihlgaodc  
 
 ## Author
-c-yama
+cyamax
 
 ## License
 MIT License
