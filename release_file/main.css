@@ -37,6 +37,26 @@ input[type="image"] {
   
 }
 
+#humberger {
+  position: absolute; /* 絶対配置 */
+  left: 330px; 
+  top: 15;
+  display: inline-block;
+  height: 24px;
+  width: 36px;
+  vertical-align: middle;
+}
+#humberger div {
+  display: inline-block;
+  height: 4px;
+  width: 24px;
+  background-color:#444;
+  margin: 2px 6px;
+  border-radius: 2px;
+}
+
+
+
 div.history {
   background-color: rgba(0,0,0, 0.05);
   position :absolute;
