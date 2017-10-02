@@ -81,16 +81,7 @@ div.option {
   height: 180px; /* 高さ40px */ 
 }
 
-
-
-li {
-  background-color: rgba(0,0,0, 0.05);
-  height: 30px;
-}
-
-.h_list {padding: 10px; margin-bottom: 10px; border: 1px dashed #333333;}
 .label {width:350px;color:#fff;background: #3d3d3d;padding:5px;font-size:120%;}
-/*.label {width:350px;color:#3d3d3d;background: #ffffff;padding:5px;font-size:120%;}:*/
 .help_label {color:#fff;background: #3d3d3d;padding:4px;font-size:120%;}
 a {color:#fff;text-decoration: none;}
 ol{
@@ -98,8 +89,6 @@ ol{
         counter-reset: li;
 /* デフォルトのスタイルをなくす */
         list-style: none;
-/*  IE6/7用のスタイル */
-        *list-style: decimal; /
         font: 15px 'trebuchet MS', 'lucida sans';
         padding-left: 10px;
 
@@ -112,13 +101,13 @@ ol{
         padding: .4em .4em .4em 2em;
         *padding: .4em;
         margin: .5em 0;
-        background: #ddd;
+        background: #eeeeee;
         color: #444;
         transition: all .3s ease-out;
 }
 
 .rounded-list a:hover{
-        background: #eee;
+        background: #fff;
 }
 
 .rounded-list a:hover:before{
