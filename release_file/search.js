@@ -11,16 +11,16 @@ function str_move(){
 
     for (var i = 0; i < url.length; i++){  //
       if (textform.match(new RegExp("^" + command[i] +" ")) && command[i] != "") { //
-        alert("一致");
+        //alert("一致");
         textform=textform.replace(command[i]+" ","");//コマンド文字を消す
         utfen= encodeURI(textform);//入力された文字をエンコードする
-        url[i] = url[i].replace(new RegExp("xxxx","g"),textform); //URLのxxxx部分を検索文字に置換する
+        url[i] = url[i].replace(new RegExp("xxxx","g"),textform); //URLのxxxx部分を検索文字に置換
         kintone_search=url[i];
       break;
       };
 
       if (i == url.length-1){ //コマンドと一致しない場合
-        alert("不一致");
+        //alert("不一致");
         utfen= encodeURI(textform);
         main_url = main_url.replace(new RegExp("xxxx","g"),textform);
         kintone_search=main_url;
@@ -68,14 +68,6 @@ function restore_options() {
     for (var i= 0; i < 4;i++){
       $('.rounded-list').append('<li><a href="#">' + command[i] + ' : ' + detail[i] + '</a></li>');
     }
-    // document.getElementById("code1").value=command1+" ";
-    // document.getElementById("code1")=detail1;
-    // document.getElementById("code2").value=command2+" ";
-    // document.getElementById("code2").label=detail2;
-    // document.getElementById("code3").value=command3+" ";
-    // document.getElementById("code3").label=detail3;
-    // //document.getElementById("code4")=command4+" ";
-
 
     var buttons = document.querySelectorAll("li");
     //console.log(buttons);

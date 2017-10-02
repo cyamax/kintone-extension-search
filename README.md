@@ -1,17 +1,30 @@
 # kintone-extension-search
-Google chrome用のkintone拡張機能。  
-kintoneをより早く使いやすくします。
+kintone用のGoogle拡張機能。  
+kintoneの検索を便利にします。
+
+## Description
+拡張機能の検索フォームから様々なアプリの検索を可能にします。  
+アプリはキーとなる「コマンド」と一緒に事前に設定しておき、  
+検索時に「キー」＋「検索したいワード」で直接アプリを検索します。  
 
 
-## Chromeウェブストア公開中
+***DEMO:***
+
+![Demo]()
+
+## Usage
+1. 
+2.
+3.
+4.
+5.
+
+## Installation
+***Chrome webstore***  
 https://chrome.google.com/webstore/detail/kintone-extension-search/mgbdmlpflafibjhcjnakcfdnihlgaodc  
 
-![](https://github.com/wryamac/kintone-extension-search/blob/master/img/kintone-search-logo.png)  
+## Author
+Takanori Yamashita
 
-![](https://github.com/wryamac/kintone-extension-search/blob/master/img/pro4.png?raw=true)  
-
-![](https://github.com/wryamac/kintone-extension-search/blob/master/img/pro2.png?raw=true)  
-
-![](https://github.com/wryamac/kintone-extension-search/blob/master/img/slide%20method%20for%20backlog.gif?raw=true)  
-
-![](https://github.com/wryamac/kintone-extension-search/blob/master/img/slide%20method%20for%20backlog2.gif?raw=true)  
+## License
+MIT License
