@@ -5,12 +5,12 @@
 
 <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="search.js"></script>
-    <style>body{width:360px;height:400px;}</style>
+    <style>body{width:360px;height:230px;}</style>
 </head>
 <body>
 <form action="#" name="form1">
 <input type="image" value="検索" src="search.png">
-<input list="code" type="text" name="text1" value="" autofocus placeholder="command + space + word..."autocomplete="on">
+<input list="code" type="text" name="text1" value="" autofocus placeholder="command + space + word..." autocomplete="on">
 
 
 <!--
@@ -23,13 +23,21 @@
 -->
 
 </form>
-
-<div id="command">
-    <li>❐コマンド</li>
+<!--　あとで実装
+<div class = "history">
+    <div class = "label">履歴</div>
+    <ol></ol>
+</div>
+-->
+<div class = "command">
+    <div class = "label">コマンド</div>
+    <ol class="rounded-list"></ol>
 </div>
 
-
-
-
+<!--
+<div class = "option">
+    <div></div>
+</div>
+-->
 </body>
 </html>
