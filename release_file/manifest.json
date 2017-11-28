@@ -17,7 +17,7 @@
   },
   "browser_action": {
     "default_title": "",
-    "default_icon": "icon_16.png",
+    "default_icon": "icon_128.png",
     "default_popup": "kintone_search.html"
   },
    "background": {
