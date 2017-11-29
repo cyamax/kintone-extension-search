@@ -2,25 +2,64 @@ body {
   background-color: #ffffff;
 }
 
-
-form, input {
-  margin: 0; /* マージンをリセット */
+.container {
+  position: relative;
 }
 
-form {
-  position: relative; /* 基準位置とする */
+.left {
+  position: absolute;
+  width: 60%;
 }
+
+.right {
+  position: absolute;
+  left: 60%;
+  width: 40%;
+}
+
+.search {
+  position: relative;
+  background-color: #dd00dd;
+  width: 100%;
+  height: 50px;
+}
+
+.command_list {
+  background-color: #0000dd;
+  width: 100%;
+  height: 150px;
+}
+
+.command_history {
+  background-color: #00dddd;
+  width: 100%;
+  height: 150px;
+}
+
+.menu {
+  background-color: #333333;
+  width: 100%;
+  height: 50px;
+}
+
+.history {
+  background-color: #777997;
+  width: 100%;
+  height: 300px;
+}
+
 
 input[name="text1"] {
   background-color: rgba(0,0,0, 0.05);
   border: 0;
   outline: 0; /*フォーカスした時の線を消す*/
   height: 40px; /* 高さ40px */
-  width: 300px;
+  width: 100%;
   padding: 0 10px; 
   position: absolute; /* 絶対配置 */
   left: 40px;
-  top: 0; 
+  margin-top: 10px;
+
   box-sizing: content-box; /* 幅にパディングを含めない */
 }
 
@@ -33,15 +72,15 @@ input[type="image"] {
   height: 40px; /* 高さ40px */
   position: absolute; /* 絶対配置 */
   left: 0px; 
-  top: 0;
+  margin-top: 10px;
   
 }
 
 #humberger {
   position: absolute; /* 絶対配置 */
-  left: 330px; 
-  top: 15;
   display: inline-block;
+  top: 10px;
+  left: 10px;
   height: 24px;
   width: 36px;
   vertical-align: middle;
@@ -57,77 +96,24 @@ input[type="image"] {
 
 
 
-div.history {
-  background-color: rgba(0,0,0, 0.05);
-  position :absolute;
-  width: 360px;
-  height: 180px; /* 高さ40px */
-  left: 10px; 
-  top: 60px;
-}
-
 div.command {
   /* background-color: rgba(0,0,0, 0.05); */
   position :absolute;
-  width: 360px;
+  width: 100%;
   height: 180px; /* 高さ40px */
-  left: 10px; 
-  top: 60px;
   /* top:250px; */
 }
 
-div.option {
-  width: 100px;
-  height: 180px; /* 高さ40px */ 
-}
-
-.label {width:350px;color:#fff;background: #3d3d3d;padding:5px;font-size:120%;}
-.help_label {color:#fff;background: #3d3d3d;padding:4px;font-size:120%;}
+.label {width:100%;color:#fff;background: #3d3d3d;padding:5px;font-size:120%;}
 a {color:#fff;text-decoration: none;}
-ol{
-/* カウンターをリセット */
-        counter-reset: li;
-/* デフォルトのスタイルをなくす */
-        list-style: none;
-        font: 15px 'trebuchet MS', 'lucida sans';
-        padding-left: 10px;
 
-        text-shadow: 0 1px 0 rgba(255,255,255,.5);
+li {
+  background-color: #ffff00;
+  margin-top: 5px;
+  height: 24px;
+  width: 100%;
 }
 
-.rounded-list a{
-        position: relative;
-        display: block;
-        padding: .4em .4em .4em 2em;
-        *padding: .4em;
-        margin: .5em 0;
-        background: #efefef;
-        color: #444;
-        transition: all .3s ease-out;
-}
-
-.rounded-list a:hover{
-        background: #fff;
-}
-
-.rounded-list a:hover:before{
-    transform: rotate(360deg);
-}
-
-.rounded-list a:before{
-        content: counter(li);
-        counter-increment: li;
-        position: absolute;
-        left: -1.3em;
-        top: 50%;
-        margin-top: -1.3em;
-        background: #ffb611;
-        height: 2em;
-        width: 2em;
-        line-height: 2em;
-        border: .3em solid #fff;
-        text-align: center;
-        font-weight: bold;
-        border-radius: 2em;
-        transition: all .3s ease-out;
+li:hover {
+  background-color: #ff7700;
 }
