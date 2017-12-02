@@ -13,11 +13,11 @@
     "open_in_tab": false
   },
   "icons": {
-    "128": "icon_128.png"
+    "128": "img/icon_128.png"
   },
   "browser_action": {
     "default_title": "",
-    "default_icon": "icon_128.png",
+    "default_icon": "img/icon_128.png",
     "default_popup": "main.html"
   },
   "content_scripts": [
