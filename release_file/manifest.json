@@ -27,10 +27,14 @@
    "persistent": false
      },
   "content_scripts": [
-  {
-    "matches": ["https://*.cybozu.com/k/*"],
-    "js": ["history.js"],
-    "run_at" : "document_idle"
-  }
-]
+    {
+      "matches": [
+        "https://*.cybozu.com/k/*"
+      ],
+      "js": [
+        "history.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
 }
