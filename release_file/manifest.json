@@ -20,15 +20,6 @@
     "default_icon": "icon_128.png",
     "default_popup": "main.html"
   },
-<<<<<<< HEAD
-  "background": {
-    "scripts": [
-      "background.js"
-    ],
-    "persistent": false
-  },
-=======
->>>>>>> 2376e80... コンテキストメニューを削除したことでbackground.jsを削除できた。fix #8
   "content_scripts": [
     {
       "matches": [
