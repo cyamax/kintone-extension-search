@@ -22,10 +22,12 @@
     "default_icon": "icon_128.png",
     "default_popup": "main.html"
   },
-   "background": {
-   "scripts": ["background.js"],
-   "persistent": false
-     },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
   "content_scripts": [
     {
       "matches": [
