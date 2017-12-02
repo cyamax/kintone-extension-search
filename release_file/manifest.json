@@ -3,8 +3,6 @@
   "name": "kintone extension search",
   "version": "1.0.0",
   "permissions": [
-    "storage",
-    "contextMenus",
     "tabs",
     "storage"
   ],
@@ -22,12 +20,15 @@
     "default_icon": "icon_128.png",
     "default_popup": "main.html"
   },
+<<<<<<< HEAD
   "background": {
     "scripts": [
       "background.js"
     ],
     "persistent": false
   },
+=======
+>>>>>>> 2376e80... コンテキストメニューを削除したことでbackground.jsを削除できた。fix #8
   "content_scripts": [
     {
       "matches": [
