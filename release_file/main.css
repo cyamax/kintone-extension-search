@@ -108,6 +108,7 @@ li.command {
   padding-left: 30px;
   line-height: 32px; //縦方向に中央揃え
   width: 100%;
+  font-weight:bold;
 }
 
 li.command:hover {
