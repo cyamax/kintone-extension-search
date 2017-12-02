@@ -4,54 +4,44 @@
 <link rel="stylesheet" type="text/css" href="reset200802.css">
 <link rel="stylesheet" type="text/css" href="main.css">
 
-<style>body{width:480px;height:360px;}</style>
+<style>body{width:570px;height:360px;}</style>
 <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="search.js"></script>
 
 </head>
 <body>
 
-<div class = "container">
-    <div class = "left">
-        <div class="search">
-            <!-- 検索フォーム-->
-            <form action="#" name="form1">
-                <input type="image" value="検索" src="search.png">
-                <input type="text" name="text1" value="" autofocus placeholder="command + space + word" autocomplete="on">
-                </form>
-        </div>
-        <div class="command_list">
-            <div class="command">
-                <div class="label">コマンド</div>
-                <ol class="rounded-list"></ol>
-            </div>
-        </div>
-        <div class = "command_history">
-            <div class = "label">履歴</div>
-        </div>
+<div class="container">
+<!-- 左側メニュー-->
+  <div class="left">
+    <div class="search">
+      <!-- 検索フォーム-->
+      <form action="#" name="form1">
+        <input type="image" value="検索" src="search.png">
+        <input id = "querry" type="text" name="text1" value="" autofocus placeholder="command + space + word" autocomplete="off">
+      </form>
     </div>
-    <div class = "right">
-        <div class="menu">
-            <!--ハンバーガメニュ-->
-            <a href="options.html" target="blank">
-                <div id="humberger">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </a>
-            <!--ハンバーガメニュ終わり-->
-            </div>
-        <div class = "history">
-        </div>
+    <div class="command_list">
+        <div class="label">コマンド</div>
+        <div class="rounded-list"></div>
     </div>
+    <div class="command_history">
+      <div class="label">履歴</div>
+      <div class="rounded-command"></div>
+    </div>
+  </div>
+<!-- 右側メニュー-->
+  <div class="right">
+    <div class="menu">
+      <a href="options.html" id="right_menu" target=""><img src="menu.png"></a>
+      <a href="" id="right_home" target="_blank"><img src="home.png"></a>
+      <a href="" id="right_bell" target="_blank"><img src="bell.png"></a>
+    </div>
+    <div class="history">
+      <div class="rounded-history"></div>
+    </div>
+  </div>
 </div>
 
-<!--
-
-
-
-
--->
 </body>
 </html>

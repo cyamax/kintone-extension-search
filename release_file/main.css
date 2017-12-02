@@ -1,5 +1,6 @@
 body {
   background-color: #ffffff;
+  white-space: nowrap; //改行させない
 }
 
 .container {
@@ -8,32 +9,32 @@ body {
 
 .left {
   position: absolute;
-  width: 60%;
+  width: 350px;
 }
 
 .right {
   position: absolute;
-  left: 60%;
-  width: 40%;
+  left: 350px;
+  width: 220px;
+  height: 530px;  
 }
 
 .search {
   position: relative;
-  background-color: #dd00dd;
+  background-color: #fff;
   width: 100%;
   height: 50px;
 }
 
 .command_list {
-  background-color: #0000dd;
+  background-color: #ffffff;
   width: 100%;
-  height: 150px;
+  height: 160px;
 }
 
 .command_history {
-  background-color: #00dddd;
+  background-color: #ffffff;
   width: 100%;
-  height: 150px;
 }
 
 .menu {
@@ -43,57 +44,42 @@ body {
 }
 
 .history {
-  background-color: #777997;
+  background-color: #222222;
   width: 100%;
-  height: 300px;
+  height: 530px;
 }
 
 
 input[name="text1"] {
   background-color: rgba(0,0,0, 0.05);
   border: 0;
-  outline: 0; /*フォーカスした時の線を消す*/
+  //outline: 0; /*フォーカスした時の線を消す*/
   height: 40px; /* 高さ40px */
-  width: 100%;
-  padding: 0 10px; 
+  width: 290px;
+  //padding: 0 10px; 
   position: absolute; /* 絶対配置 */
-  left: 40px;
+  left: 50px;
   margin-top: 10px;
-
-  box-sizing: content-box; /* 幅にパディングを含めない */
+  //box-sizing: content-box; /* 幅にパディングを含めない */
 }
 
 input[type="image"] {
   background-color: rgba(0,0,0, 0.05);
-  border: 0;
-  outline: 0; /*フォーカスした時の線を消す*/
-  padding: 0;
+  //border: 0;
+  //outline: 0; /*フォーカスした時の線を消す*/
+  //padding: 0;
   width: 40px;
   height: 40px; /* 高さ40px */
   position: absolute; /* 絶対配置 */
-  left: 0px; 
+  //left: 0px; 
   margin-top: 10px;
+  margin-left: 10px;
   
 }
 
-#humberger {
-  position: absolute; /* 絶対配置 */
-  display: inline-block;
-  top: 10px;
-  left: 10px;
-  height: 24px;
-  width: 36px;
-  vertical-align: middle;
+.menu img {
+  margin: 12px;
 }
-#humberger div {
-  display: inline-block;
-  height: 4px;
-  width: 24px;
-  background-color:#444;
-  margin: 2px 6px;
-  border-radius: 2px;
-}
-
 
 
 div.command {
@@ -104,16 +90,61 @@ div.command {
   /* top:250px; */
 }
 
-.label {width:100%;color:#fff;background: #3d3d3d;padding:5px;font-size:120%;}
-a {color:#fff;text-decoration: none;}
+.label {
+  width:100%;color:#555;
+  background: #fff;
+  padding-left:30px;
+  line-height: 32px; //縦方向に中央揃え
+  font-size:100%;
+  font-weight:bold;
+  border-bottom : 1px solid #FF9900
+}
+
+a {
+  color:#000;
+  text-decoration: none;
+}
 
 li {
-  background-color: #ffff00;
-  margin-top: 5px;
-  height: 24px;
+  list-style-type: none;
+}
+
+
+li.command {
+  background-color: #fff;
+  //margin-top: 4px;
+  padding-left: 30px;
+  line-height: 32px; //縦方向に中央揃え
   width: 100%;
 }
 
-li:hover {
-  background-color: #ff7700;
+li.command:hover {
+  background-color: #ff7777;
+}
+
+
+/* 右側css */
+div.app_history {
+  background-color: #222222;
+  height:48px;
+  width:100%;
+  
+}
+
+div.app_history:hover {
+  background-color: #555555;
+  width:100%;
+}
+
+li.app_label {
+  margin-left: 50px;
+  color: #fff;
+  line-height: 48px; //縦方向に中央揃え
+  font-weight:500;
+}
+
+.app_img {
+  float: left;
+  margin: 8px;
+  width: 32px;
 }

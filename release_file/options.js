@@ -1,6 +1,6 @@
 ﻿// Saves options to chrome.storage
 function save_options() {
-
+  var url_kintone = document.getElementById('option_kintone').value;
   var url0 = document.getElementById('url0').value;
   var command1 = document.getElementById('command1').value;
   var detail1 = document.getElementById('detail1').value;
@@ -16,6 +16,7 @@ function save_options() {
   var url4 = document.getElementById('url4').value;
 
   chrome.storage.sync.set({
+    url : url_kintone,
     url0    : url0,
     command1: command1,
     detail1 : detail1,
@@ -44,6 +45,7 @@ function save_options() {
 // stored in chrome.storage.
 function restore_options() {
   chrome.storage.sync.get({
+    url    : '',
     url0    : '',
     command1: '',
     detail1 : '',
@@ -60,6 +62,7 @@ function restore_options() {
 
 
   }, function(items) {
+    document.getElementById('option_kintone').value  = items.url;
     document.getElementById('url0').value     = items.url0;
     document.getElementById('command1').value = items.command1;
     document.getElementById('detail1').value  = items.detail1;

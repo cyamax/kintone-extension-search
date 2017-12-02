@@ -4,7 +4,9 @@
   "version": "1.0.0",
   "permissions": [
     "storage",
-    "contextMenus"
+    "contextMenus",
+    "tabs",
+    "storage"
   ],
   "description": "kintoneの検索を高速化",
   "options_ui": {
@@ -18,10 +20,17 @@
   "browser_action": {
     "default_title": "",
     "default_icon": "icon_128.png",
-    "default_popup": "kintone_search.html"
+    "default_popup": "main.html"
   },
    "background": {
    "scripts": ["background.js"],
    "persistent": false
-     }
+     },
+  "content_scripts": [
+  {
+    "matches": ["https://*.cybozu.com/k/*"],
+    "js": ["history.js"],
+    "run_at" : "document_idle"
+  }
+]
 }

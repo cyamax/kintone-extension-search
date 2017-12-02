@@ -2,15 +2,27 @@
 <html>
 <head><title>Extension Options</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<style>
+body{
+  width:640px;
+  height:360px;
+  overflow:hidden;
+}
+</style>
 </head>
 
-<body >
+<body>
 
 
 ❐基本検索
 <form action="#" id="option0">
-<input type="url" name="url0" id="url0" value="" size="80" placeholder="検索URL  例https://test.cybozu.com/k/search?keyword=xxxx">
+  <input type="url" name="url0" id="url0" value="" size="90" placeholder="好みの検索フォーム（kintoneやCybozuなど）で「xxxx」を検索し、URLを貼り付けて下さい">
+  <br>例：https://test.cybozu.com/k/search?keyword=xxxx <br><br>
+</form>
+
+❐kintone
+<form action="#">
+  https://<input type="url" id="option_kintone" value="" size="5" placeholder="">.cybozu.com/k/#portal
 </form>
 
 ❐コマンド
@@ -18,28 +30,28 @@
 <form action="#" id="option1">
 <input type="text" name="command" id="command1" value="" size="5" placeholder="コマンド">
 <input type="text" name="detail" id="detail1" value="" size="10" placeholder="説明">
-<input type="url" name="url" id="url1" value="" size="53" placeholder="URL">
+<input type="url" name="url" id="url1" value="" size="60" placeholder="好きな検索フォームで「xxxx」を検索し、URLを貼り付けて下さい">
  </form>
 
 <div id="ok2"></div>
 <form action="#" id="option2">
 <input type="text" name="command" id="command2" value="" size="5" placeholder="コマンド">
 <input type="text" name="detail" id="detail2" value="" size="10" placeholder="説明">
-<input type="url" name="url" id="url2" value="" size="53" placeholder="URL">
+<input type="url" name="url" id="url2" value="" size="60" placeholder="好きな検索フォームで「xxxx」を検索し、URLを貼り付けて下さい">
 </form>
 
 <div id="ok3"></div>
 <form action="#" id="option2">
 <input type="text" name="command" id="command3" value="" size="5" placeholder="コマンド">
 <input type="text" name="detail" id="detail3" value="" size="10" placeholder="説明">
-<input type="url" name="url" id="url3" value="" size="53" placeholder="URL">
+<input type="url" name="url" id="url3" value="" size="60" placeholder="好きな検索フォームで「xxxx」を検索し、URLを貼り付けて下さい">
 </form>
 
 <div id="ok4"></div>
 <form action="#" id="option2">
 <input type="text" name="command" id="command4" value="" size="5" placeholder="コマンド">
 <input type="text" name="detail" id="detail4" value="" size="10" placeholder="説明">
-<input type="url" name="url" id="url4" value="" size="53" placeholder="URL">
+<input type="url" name="url" id="url4" value="" size="60" placeholder="好きな検索フォームで「xxxx」を検索し、URLを貼り付けて下さい">
 </form>
 設定例：「g]「google検索」「http://www.google.co.jp/search?&q=xxxx」<br>
 

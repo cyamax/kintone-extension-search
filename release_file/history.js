@@ -1,38 +1,42 @@
 var history_url = [];
 
 function rireki() {
-    //kintoneのサイト情報を取得
-    //サイトurl
-    var $dir = location.href.split("/");
-    var url = "https://" + $dir[2] +"/" + $dir[3] + "/" + $dir[4] + "/";
-    //サイトタイトル(chrome.historyでは取得できないため)
-    var title = document.title;
-    //ファビコンURL
-    //favicon画像のurlはhtml内のhead->linkタグの属性relがshortcut iconのhref値に記載れている
-    for (var i = 0;i < document.head.getElementsByTagName('link').length ;i++){
-      if (document.head.getElementsByTagName('link')[i].getAttribute('rel') === "shortcut icon"){
-        var favicon_url = document.head.getElementsByTagName('link')[i].getAttribute('href');
-        //標準以外のアップロードしたアイコンはurlが違うため整形が必要
-        if (favicon_url.indexOf('cybozu.com') == -1) {
-          favicon_url = "https://" + location.hostname + favicon_url;
-          //ファビコンのアイコンをそのまま使うと画像サイズが小さいのでクエリ内の文字を置換
-          favicon_url = favicon_url.replace('FAVICON','NORMAL'); 
-        };
-        break;
-      } else {
-        var favicon_url = '';
-      }
-    };
-    //サイトアクセス時間
-    var date = new Date() ;
-    var unixTimestamp = Math.floor( date.getTime() / 1000 ) ;
-    
-    console.log(url,title,favicon_url);
-    
-    //サイト情報をchromeに保存
-    history_mod([unixTimestamp, title, url, favicon_url]);
-  };
+  //kintoneのサイト情報を取得
+  //サイトurl
+  var $dir = location.href.split("/");
+  var url = "https://" + $dir[2] +"/" + $dir[3] + "/" + $dir[4] + "/";
   
+  //サイトタイトル(chrome.historyでは取得できないため)
+  var title = document.title.split(" - ")[0];
+  
+  //ファビコンURL
+  //favicon画像のurlはhtml内のhead->linkタグの属性relがshortcut iconのhref値に記載れている
+  for (var i = 0;i < document.head.getElementsByTagName('link').length ;i++){
+    if (document.head.getElementsByTagName('link')[i].getAttribute('rel') === "shortcut icon"){
+      var favicon_url = document.head.getElementsByTagName('link')[i].getAttribute('href');
+      //標準以外のアップロードしたアイコンはurlが違うため整形が必要
+      if (favicon_url.indexOf('cybozu.com') == -1) {
+        favicon_url = "https://" + location.hostname + favicon_url;
+        //ファビコンのアイコンをそのまま使うと画像サイズが小さいのでクエリ内の文字を置換
+        favicon_url = favicon_url.replace('FAVICON','NORMAL'); 
+      };
+      break;
+    } else {
+      var favicon_url = '';
+      return; //faviconが取れない場合保存しない
+    }
+  };
+
+  //サイトへのアクセス時間
+  var date = new Date() ;
+  var unixTimestamp = Math.floor( date.getTime() / 1000 ) ;
+  
+  console.log(url,title,favicon_url);
+  
+  //サイト情報をchromeに保存
+  history_mod([unixTimestamp, title, url, favicon_url]);
+};
+
 
 
 /////履歴管理
@@ -66,5 +70,5 @@ function history_mod(active_url){
     });
   };
 
-
+  //ページタイトルが動的に変わるため1秒後に取得
   window.setTimeout("rireki()",1000);

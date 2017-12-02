@@ -61,9 +61,68 @@ function conmenu(items){
   });
 }
 
+
+
+
+
+
+
+//初期設定
+var history_url = [];
+//chrome.browserAction.setIcon({path:'off.png'});
+
+function change_popup(tabid){
+  chrome.tabs.get(tabid, function(tab){
+    //console.log(tab.url);
+    //backlogだけすスライドが作れるようにする
+    //if (tab.url.match(/\.backlog\.(jp|com)\/wiki\//)) {
+    //  chrome.browserAction.setIcon({'path':'on.png'});
+    //  chrome.browserAction.setPopup({'popup':''}); //あえて空白。新規タブで表示させるために空白
+    //} else {
+      //backlog以外のとき
+    //  chrome.browserAction.setIcon({'path':'off.png'});
+    //  chrome.browserAction.setPopup({'popup':'test.html'});
+    //}
+  });
+};
+
+
+
+chrome.tabs.onActiveChanged.addListener(function(tabid){ //タブが切り替わったら実行
+  change_popup(tabid);
+});
+
+
+//開いているタブが更新したら
+chrome.tabs.onUpdated.addListener(function(tabid){  //ページが更新されたら実行
+  change_popup(tabid);
+});
+
+
 //クリックされたときのコールバック
 //function onclickmenu(info,tab){
 chrome.contextMenus.onClicked.addListener( function(info,tab){
   kintone_search = url[Number(info.menuItemId)].replace(new RegExp("xxxx","g"),info.selectionText);
   chrome.tabs.create({url: kintone_search });
 });
+
+
+//現在アクティブなページがbacklogのとき & setpopupが空白のときにのみ有効
+// setpopupが既に設定されている場合、onClicked.addListenerはchromeの仕様により無効化される
+chrome.browserAction.onClicked.addListener(function(tab) {
+  alert("aaa");
+  var date = new Date() ;
+  var unixTimestamp = Math.floor( date.getTime() / 1000 ) ;
+  var active_url= Array(3);  //現在開いているurl情報を入れる
+  //var history_url = Array(11); //過去の履歴
+  active_url = [unixTimestamp, tab.title, tab.url]; //保存時間、urlタイトル,url
+  //history_url = [active_url, active_url];
+
+  history_mod(active_url);
+
+//  var urldata = {'time':history_url,'key': tab.url,'title':tab.title};
+
+  //chrome.tabs.create({'url':'slide_page.html'});
+});
+
+
