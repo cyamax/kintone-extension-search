@@ -57,10 +57,10 @@ function history_mod(active_url){
       //追加(先頭に追加)
       history_url.unshift(active_url); //先頭に追加
   
-      //11件以上の場合、一番古いレコードを消して10件にする
-      if (history_url.length > 10){
+      //11件以上の場合、一番古いレコードを消して8件にする
+      if (history_url.length > 8){
         console.log("over");
-        history_url.splice(10,history_url.length-10);
+        history_url.splice(8,history_url.length-8);
       };
   
       var save_data = {'data':history_url};

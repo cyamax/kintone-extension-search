@@ -139,10 +139,10 @@ function command_save(textform,kintone_search){
     //追加(先頭に追加)
     command_data.unshift(command_mod); //先頭に追加
 
-    //11件以上の場合、一番古いレコードを消して10件にする
-    if (command_data.length > 9){
+    //11件以上の場合、一番古いレコードを消して6件にする
+    if (command_data.length > 6){
       console.log("over");
-      command_data.splice(9,command_data.length-9);
+      command_data.splice(6,command_data.length-6);
     };
 
     var save_data = {'command_data':command_data};
