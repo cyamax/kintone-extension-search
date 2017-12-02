@@ -95,11 +95,9 @@ function restore_options() {
 }
 
 //履歴取得
-var history_url = []; //chrome.storageから持ってきたurl情報各種
 chrome.storage.local.get(function(value){
-  // console.log(value.data);
   if (typeof(value.data) != 'undefined') {
-    history_url = value.data;
+    var history_url = value.data;
     for (var i = 0;i < history_url.length ;i++){
       $('.rounded-history').append('<a target="_blank" href="'+history_url[i][2]+'"><div class="app_history"><img class="app_img" src="'+history_url[i][3]+'"><li class="app_label">'+history_url[i][1]+'</li><div></a>');
     };
@@ -160,6 +158,7 @@ chrome.storage.local.get(function (value) {
   if (typeof (value.command_data) != 'undefined') {
     history_command = value.command_data;
     for (var i = 0; i < history_command.length; i++) {
+      var date = new Date( history_command[i][0] * 1000 );
       $('.rounded-command').append('<a target="_blank" href="' + history_command[i][2] + '"><li class ="command">' + history_command[i][1] + '</li></a>');
     };
   } else {

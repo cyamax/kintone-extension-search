@@ -10,10 +10,10 @@ kintoneの検索を便利にします。
 ***DEMO:***  
 
 * 検索画面  
-![](2017-10-03-00-00-03.png)
+![](main.png)
 
 * 設定画面  
-![](2017-10-03-00-06-12.png) 
+![](option.png) 
 ## Usage
 kintone extension search はURLクエリ内の ***「xxxx」*** を検索ワードに置換します。
 
@@ -21,8 +21,11 @@ kintone extension search はURLクエリ内の ***「xxxx」*** を検索ワー�
 1. kintoneのトップページの「全体検索」に「xxxx」を入力
 2. 検索結果のURLをコピー
 3. kintone extension search のオプションを開いて「基本検索」にコピーしたURLを貼り付けて「Save」
-4. 拡張機能を起動してkintoneで検索したいワードを入力してエンター
+4. 拡張機能を起動してkintoneで検索したいワードを入力してEnter
 5. kintoneの検索結果が開きます
+
+### kintone
+1. 登録したいkintoneのホスト名を入力
 
 ### コマンド
 特定のアプリで検索をしたい場合に使用します。  

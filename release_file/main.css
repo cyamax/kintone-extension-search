@@ -53,25 +53,18 @@ body {
 input[name="text1"] {
   background-color: rgba(0,0,0, 0.05);
   border: 0;
-  //outline: 0; /*フォーカスした時の線を消す*/
   height: 40px; /* 高さ40px */
   width: 290px;
-  //padding: 0 10px; 
   position: absolute; /* 絶対配置 */
   left: 50px;
   margin-top: 10px;
-  //box-sizing: content-box; /* 幅にパディングを含めない */
 }
 
 input[type="image"] {
   background-color: rgba(0,0,0, 0.05);
-  //border: 0;
-  //outline: 0; /*フォーカスした時の線を消す*/
-  //padding: 0;
   width: 40px;
   height: 40px; /* 高さ40px */
   position: absolute; /* 絶対配置 */
-  //left: 0px; 
   margin-top: 10px;
   margin-left: 10px;
   
@@ -112,10 +105,10 @@ li {
 
 li.command {
   background-color: #fff;
-  //margin-top: 4px;
   padding-left: 30px;
   line-height: 32px; //縦方向に中央揃え
   width: 100%;
+  font-weight:bold;
 }
 
 li.command:hover {
