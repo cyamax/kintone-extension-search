@@ -3,8 +3,8 @@ var history_url = [];
 function rireki() {
   //kintoneのサイト情報を取得
   //サイトurl
-  var $dir = location.href.split("/");
-  var url = "https://" + $dir[2] +"/" + $dir[3] + "/" + $dir[4] + "/";
+  var dir = location.href.split("/");
+  var url = "https://" + dir[2] +"/" + dir[3] + "/" + dir[4] + "/";
   
   //サイトタイトル(chrome.historyでは取得できないため)
   var title = document.title.split(" - ")[0];
@@ -31,7 +31,7 @@ function rireki() {
   var date = new Date() ;
   var unixTimestamp = Math.floor( date.getTime() / 1000 ) ;
   
-  console.log(url,title,favicon_url);
+  //console.log(url,title,favicon_url);
   
   //サイト情報をchromeに保存
   history_mod([unixTimestamp, title, url, favicon_url]);
@@ -42,13 +42,13 @@ function rireki() {
 /////履歴管理
 function history_mod(active_url){
     chrome.storage.local.get('data',function(value){
-      console.log(value.data );
+      //console.log(value.data );
       if (typeof(value.data) != 'undefined') {history_url = value.data};
       for (var i = 0;i < history_url.length ;i++){
         if (history_url[i][2] == active_url[2]){
-          console.log("削除前",history_url);
+          //console.log("削除前",history_url);
           history_url.splice(i,1);
-          console.log("削除後",history_url);
+          //console.log("削除後",history_url);
           i--;
         }
         //console.log(history_url[i][2]);
@@ -59,13 +59,13 @@ function history_mod(active_url){
   
       //11件以上の場合、一番古いレコードを消して8件にする
       if (history_url.length > 8){
-        console.log("over");
+        //console.log("over");
         history_url.splice(8,history_url.length-8);
       };
   
       var save_data = {'data':history_url};
       chrome.storage.local.set(save_data, function () {
-        console.log("save");
+        //console.log("save");
       });
     });
   };

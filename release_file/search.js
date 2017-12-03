@@ -126,9 +126,9 @@ function command_save(textform,kintone_search){
 
   for (var i = 0;i < command_data.length ;i++){
     if (command_data[i][1] == command_mod[1]){
-      console.log("削除前",command_mod);
+      //console.log("削除前",command_mod);
       command_data.splice(i,1);
-      console.log("削除後",command_mod);
+      //console.log("削除後",command_mod);
       i--;
     }
        //console.log(history_url[i][2]);
@@ -139,13 +139,13 @@ function command_save(textform,kintone_search){
 
     //11件以上の場合、一番古いレコードを消して6件にする
     if (command_data.length > 6){
-      console.log("over");
+      //console.log("over");
       command_data.splice(6,command_data.length-6);
     };
 
     var save_data = {'command_data':command_data};
     chrome.storage.local.set(save_data, function () {
-      console.log("save");
+      //console.log("save");
     });
   });
 };
