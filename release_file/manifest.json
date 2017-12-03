@@ -3,7 +3,6 @@
   "name": "kintone extension search",
   "version": "2.0.0",
   "permissions": [
-    "tabs",
     "storage"
   ],
   "description": "kintoneの検索を高速化",
